@@ -338,6 +338,49 @@ body.drawer-open .mobile-drawer {
   transform: translateX(0);
 }
 
+.back-home-button {
+  position: fixed;
+  right: 28px;
+  bottom: max(28px, calc(env(safe-area-inset-bottom) + 28px));
+  z-index: 18;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 13px 20px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff;
+  box-shadow: 0 12px 24px rgba(201, 42, 42, 0.28);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(14px);
+  transition: opacity 180ms ease, transform 180ms ease, box-shadow 180ms ease;
+}
+
+.back-home-button .icon-svg {
+  width: 17px;
+  height: 17px;
+}
+
+.back-home-button:hover {
+  box-shadow: 0 16px 30px rgba(201, 42, 42, 0.36);
+}
+
+body.show-back-home:not(.drawer-open) .back-home-button {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+body.show-back-home:not(.drawer-open) .back-home-button:hover {
+  transform: translateY(-2px);
+}
+
 .hero-shell {
   background: var(--hero);
 }
@@ -1451,6 +1494,14 @@ body.drawer-open .mobile-drawer {
 
   .contact-pill {
     width: 100%;
+  }
+
+  .back-home-button {
+    right: 18px;
+    bottom: max(92px, calc(env(safe-area-inset-bottom) + 92px));
+    min-height: 46px;
+    padding: 12px 18px;
+    font-size: 14px;
   }
 }
 

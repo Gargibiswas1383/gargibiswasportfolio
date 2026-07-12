@@ -75,6 +75,7 @@ const navLinks = Array.from(document.querySelectorAll(".nav-link"));
 const themeButtons = Array.from(document.querySelectorAll(".theme-pill"));
 const menuButton = document.querySelector(".mobile-menu-button");
 const mobileDrawer = document.querySelector(".mobile-drawer");
+const backHomeButton = document.querySelector(".back-home-button");
 const drawerCloseTriggers = Array.from(document.querySelectorAll("[data-drawer-close]"));
 const statNumbers = Array.from(document.querySelectorAll(".stat-number[data-count]"));
 const revealTargets = Array.from(document.querySelectorAll(".reveal-on-scroll"));
@@ -140,6 +141,7 @@ const updateActiveNav = () => {
   }
 
   setActiveNav(activeHref);
+  document.body.classList.toggle("show-back-home", activeHref !== "#top" && window.scrollY > 220);
 };
 
 updateActiveNav();
@@ -165,6 +167,12 @@ navLinks.forEach((link) => {
     setActiveNav(link.getAttribute("href"));
     setDrawerOpen(false);
   });
+});
+
+backHomeButton?.addEventListener("click", () => {
+  setActiveNav("#top");
+  setDrawerOpen(false);
+  document.body.classList.remove("show-back-home");
 });
 
 document.addEventListener("keydown", (event) => {

@@ -15,144 +15,136 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
+    <header class="site-header">
+      <nav class="nav-shell" aria-label="Primary navigation">
+        <a class="home-pill" href="#top" aria-label="Home">
+          <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M3 10.75 12 3l9 7.75v9.25a1 1 0 0 1-1 1h-5.5v-6h-5v6H4a1 1 0 0 1-1-1z" fill="currentColor" />
+          </svg>
+          <span>Home</span>
+        </a>
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#education">Education</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Work</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="nav-actions">
+          <a
+            class="resume-pill"
+            href="https://drive.google.com/file/d/1AH92gDEkU8awpTGvhW9BP4Ap_7mNFzel/view?usp=drivesdk"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Resume
+          </a>
+          <button class="theme-pill" type="button" aria-label="Toggle dark theme">
+            <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M20.5 14.3A7.8 7.8 0 0 1 9.7 3.5 8.7 8.7 0 1 0 20.5 14.3Z" fill="currentColor" />
+            </svg>
+          </button>
+          <a
+            class="icon-link"
+            href="https://www.behance.net/gargibiswas3"
+            aria-label="Behance"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img class="behance-logo" src="./assets/behance-logo.png" alt="" />
+          </a>
+          <a
+            class="icon-link"
+            href="https://www.linkedin.com/in/gargi-biswas-6b5011249/"
+            aria-label="LinkedIn"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M6.28 8.27a1.9 1.9 0 1 1 0-3.8 1.9 1.9 0 0 1 0 3.8ZM4.7 9.8h3.16V19.3H4.7Zm5.06 0h3.03v1.3h.04c.42-.8 1.46-1.65 3-1.65 3.2 0 3.79 2.11 3.79 4.85v5h-3.16v-4.43c0-1.06-.02-2.42-1.47-2.42-1.48 0-1.7 1.15-1.7 2.34v4.5H9.76Z" fill="currentColor" />
+            </svg>
+          </a>
+        </div>
+      </nav>
+    </header>
+
     <main id="top">
-      <section class="hero-wrap" id="about">
-        <div class="hero">
-          <div class="hero-content">
-            <header class="site-header">
-              <nav class="nav-shell">
-                <a class="home-pill" href="#top">
-                  <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true">
-                    <path
-                      d="M3 10.75 12 3l9 7.75v9.25a1 1 0 0 1-1 1h-5.5v-6h-5v6H4a1 1 0 0 1-1-1z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                  <span>Home</span>
-                </a>
-                <div class="nav-links">
-                  <a href="#about">About</a>
-                  <a href="#experience">Experience</a>
-                  <a href="#education">Education</a>
-                  <a href="#skills">Skills</a>
-                  <a href="#projects">Work</a>
-                  <a href="#contact">Contact</a>
-                </div>
-                <div class="nav-actions">
-                  <a
-                    class="resume-pill"
-                    href="https://drive.google.com/file/d/1AH92gDEkU8awpTGvhW9BP4Ap_7mNFzel/view?usp=drivesdk"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Resume
-                  </a>
-                  <a
-                    class="icon-link"
-                    href="https://www.behance.net/gargibiswas3"
-                    aria-label="Behance"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img class="behance-logo" src="./assets/behance-logo.png" alt="" />
-                  </a>
-                  <a
-                    class="icon-link"
-                    href="https://www.linkedin.com/in/gargi-biswas-6b5011249/"
-                    aria-label="LinkedIn"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true">
-                      <path
-                        d="M6.28 8.27a1.9 1.9 0 1 1 0-3.8 1.9 1.9 0 0 1 0 3.8ZM4.7 9.8h3.16V19.3H4.7Zm5.06 0h3.03v1.3h.04c.42-.8 1.46-1.65 3-1.65 3.2 0 3.79 2.11 3.79 4.85v5h-3.16v-4.43c0-1.06-.02-2.42-1.47-2.42-1.48 0-1.7 1.15-1.7 2.34v4.5H9.76Z"
-                        fill="currentColor"
-                      />
-                    </svg>
-                  </a>
-                </div>
-              </nav>
-            </header>
-            <div class="hero-main">
-              <img
-                class="hero-image"
-                src="https://www.figma.com/api/mcp/asset/9eb9faef-c778-433d-bbe1-1049fbd3eef2"
-                alt="Gargi Biswas"
-              />
-              <div class="hero-labels" aria-hidden="true">
-                <span class="hero-label hero-label-left">UI/UX Designer</span>
-                <span class="hero-label hero-label-right">Experience Architect</span>
-              </div>
-            </div>
+      <section class="hero-shell" aria-label="About Gargi Biswas">
+        <div class="hero-stage">
+          <img
+            class="hero-photo"
+            src="./assets/figma-hero-gargi.png"
+            alt="Gargi Biswas portrait with About Me typography"
+            width="4096"
+            height="2286"
+            fetchpriority="high"
+          />
+          <div class="hero-labels" aria-hidden="true">
+            <span>UI/UX Designer</span>
+            <span>Experience Architect</span>
           </div>
         </div>
 
-        <section class="about-panel grid-backdrop">
-          <div class="inner">
-            <div class="about-copy">
-              <h2>
-                <span class="about-heading-line">WHO</span>
-                <span class="about-heading-line">
-                  AM I<span class="about-heading-mark">?</span>
-                </span>
-              </h2>
-              <p>
-                I am <strong>Gargi Biswas</strong>, a UI/UX designer based in Jaipur who
-                specializes in translating research and usability insights into
-                structured design solutions. From wireframes to component
-                systems in Figma, I create experiences that are not just
-                visually appealing, but clear, functional, and easy to navigate.
-              </p>
-              <a
-                class="cta cta-red"
-                href="https://drive.google.com/file/d/1AH92gDEkU8awpTGvhW9BP4Ap_7mNFzel/view?usp=drivesdk"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true">
-                  <path
-                    d="M12 3a.75.75 0 0 1 .75.75v9.44l3.72-3.72a.75.75 0 1 1 1.06 1.06l-5 5a.75.75 0 0 1-1.06 0l-5-5a.75.75 0 0 1 1.06-1.06l3.72 3.72V3.75A.75.75 0 0 1 12 3ZM5 19.25a.75.75 0 0 1 .75-.75h12.5a.75.75 0 0 1 0 1.5H5.75a.75.75 0 0 1-.75-.75Z"
-                    fill="currentColor"
-                  />
-                </svg>
-                <span>Download Resume</span>
-              </a>
-            </div>
-            <div class="stats">
-              <div class="stat-card">
-                <strong class="stat-number">10+</strong>
-                <span class="stat-label">Projects Shipped</span>
+        <section class="about-panel grid-backdrop" id="about">
+          <div class="figma-section about-inner">
+            <h1 class="section-title about-title">WHO<br />AM I?</h1>
+            <div class="about-body">
+              <div class="about-copy">
+                <p>
+                  I am <strong>Gargi Biswas</strong>, a UI/UX designer based in Jaipur who
+                  specializes in translating research and usability insights into
+                  structured design solutions. From wireframes to component systems in
+                  Figma, I create experiences that are not just visually appealing, but
+                  clear, functional, and easy to navigate.
+                </p>
+                <a
+                  class="cta cta-red"
+                  href="https://drive.google.com/file/d/1AH92gDEkU8awpTGvhW9BP4Ap_7mNFzel/view?usp=drivesdk"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 3a.75.75 0 0 1 .75.75v9.44l3.72-3.72a.75.75 0 1 1 1.06 1.06l-5 5a.75.75 0 0 1-1.06 0l-5-5a.75.75 0 0 1 1.06-1.06l3.72 3.72V3.75A.75.75 0 0 1 12 3ZM5 19.25a.75.75 0 0 1 .75-.75h12.5a.75.75 0 0 1 0 1.5H5.75a.75.75 0 0 1-.75-.75Z" fill="currentColor" />
+                  </svg>
+                  <span>Download Resume</span>
+                </a>
               </div>
-              <div class="stat-card">
-                <strong class="stat-number">2+</strong>
-                <span class="stat-label">Years of Study</span>
-              </div>
-              <div class="stat-card">
-                <strong class="stat-number">10+</strong>
-                <span class="stat-label">Users Tested</span>
+              <div class="stats" aria-label="Portfolio statistics">
+                <div class="stat-card">
+                  <strong class="stat-number" data-count="10" data-suffix="+">10+</strong>
+                  <span class="stat-label">Projects Shipped</span>
+                </div>
+                <div class="stat-card">
+                  <strong class="stat-number" data-count="2" data-suffix="+">2+</strong>
+                  <span class="stat-label">Years of Study</span>
+                </div>
+                <div class="stat-card">
+                  <strong class="stat-number" data-count="10" data-suffix="+">10+</strong>
+                  <span class="stat-label">Users Tested</span>
+                </div>
               </div>
             </div>
           </div>
         </section>
       </section>
 
-      <section class="section section-pad grid-backdrop" id="experience">
-        <div class="container">
-          <h3 class="section-title">Experience</h3>
+      <section class="section grid-backdrop" id="experience">
+        <div class="figma-section">
+          <h2 class="section-title">Experience</h2>
           <p class="section-subtitle">
-            What I built, how I contributed, and the impact I created through
-            design.
+            What I built, how I contributed, and the impact I created through design.
           </p>
           <div class="timeline">
-            <article class="card timeline-card">
+            <article class="card timeline-card reveal-on-scroll">
               <p class="meta">JAN 2026 – PRESENT · ON-SITE · JAIPUR, RAJASTHAN</p>
-              <h4>UI/UX Designer Trainee</h4>
+              <h3>UI/UX Designer Trainee</h3>
               <p class="org">InfoObjects Software (India) Pvt Ltd</p>
               <ul>
                 <li>Shipped interfaces and wireframes for 5+ web applications.</li>
@@ -160,9 +152,9 @@
                 <li>Collaborated with cross-functional teams on scalable product flows.</li>
               </ul>
             </article>
-            <article class="card timeline-card">
+            <article class="card timeline-card reveal-on-scroll">
               <p class="meta">AUG 2025 – JAN 2026 · REMOTE</p>
-              <h4>UI/UX Designer Intern</h4>
+              <h3>UI/UX Designer Intern</h3>
               <p class="org">One Aim IT Solutions</p>
               <ul>
                 <li>Delivered wireframes, prototypes, and user flows for product concepts.</li>
@@ -174,27 +166,25 @@
         </div>
       </section>
 
-      <section class="section section-pad grid-backdrop" id="education">
-        <div class="container">
-          <h3 class="section-title">Education</h3>
+      <section class="section grid-backdrop" id="education">
+        <div class="figma-section">
+          <h2 class="section-title">Education</h2>
           <p class="section-subtitle">
-            What I learned, how I applied it, and how it shaped my design
-            thinking.
+            What I learned, how I applied it, and how it shaped my design thinking.
           </p>
           <div class="timeline">
-            <article class="card timeline-card">
-              <p class="date-chip">2022 – 2026 | Graduated</p>
-              <h4>B.Tech, Computer Science</h4>
+            <article class="card timeline-card reveal-on-scroll">
+              <p class="date-chip">2022 – Present</p>
+              <h3>B.Tech, Computer Science</h3>
               <p class="org">University of Engineering &amp; Management, Jaipur</p>
               <ul>
-                <li>Built a strong foundation in software engineering, problem solving, and user-centered design.</li>
-                <li>Applied technical and UX principles across academic and personal projects.</li>
+                <li>Building technical depth alongside UX thinking and practical problem solving.</li>
                 <li class="timeline-highlight">CGPA: 8.7</li>
               </ul>
             </article>
-            <article class="card timeline-card">
+            <article class="card timeline-card reveal-on-scroll">
               <p class="date-chip">2020 – 2022</p>
-              <h4>Higher Secondary Education</h4>
+              <h3>Higher Secondary Education</h3>
               <p class="org">M.T.B Girls Higher Secondary School, Agartala</p>
               <ul>
                 <li>Class XII: 86.40%</li>
@@ -205,143 +195,91 @@
         </div>
       </section>
 
-      <section class="section section-pad grid-backdrop" id="skills">
-        <div class="container skills-showcase">
-          <div class="section-badge reveal-on-scroll">
-            Product Designer • UI/UX Designer • AI-Assisted Design
-          </div>
-          <h3 class="section-title">Skills &amp; Expertise</h3>
+      <section class="section skills-section grid-backdrop" id="skills">
+        <div class="figma-section">
+          <h2 class="section-title">Skills</h2>
           <p class="section-subtitle">
-            The tools, methodologies, and product-thinking approaches I use to
-            design meaningful digital experiences.
+            What I use, how I think, and how I design meaningful digital experiences.
           </p>
           <div class="skills-grid">
             <article class="card skill-card reveal-on-scroll">
-              <div class="skill-card-head">
-                <span class="skill-icon" aria-hidden="true">
-                  <svg class="icon-svg" viewBox="0 0 24 24">
-                    <path d="M12 3.25 14.47 8.3 20 9.1l-4 3.9.95 5.5L12 15.9 7.05 18.5 8 13 4 9.1l5.53-.8Z" fill="currentColor" />
-                  </svg>
-                </span>
-                <h4>UI/UX Design</h4>
-              </div>
+              <span class="skill-symbol">✦</span>
+              <h3>UI/UX Design</h3>
               <div class="rule"></div>
               <div class="chips">
-                <span>Wireframing</span><span>Responsive Design</span><span>Design Systems</span><span>Visual Design</span><span>User Interface Design</span><span>User Experience Design</span>
+                <span>Wireframing</span><span>Responsive Design</span><span>Design Systems</span>
               </div>
             </article>
             <article class="card skill-card reveal-on-scroll">
-              <div class="skill-card-head">
-                <span class="skill-icon" aria-hidden="true">
-                  <svg class="icon-svg" viewBox="0 0 24 24">
-                    <path d="M10.5 4.5a6 6 0 1 1 0 12 6 6 0 0 1 0-12Zm0 1.5a4.5 4.5 0 1 0 2.85 7.98l3.58 3.57a.75.75 0 1 0 1.06-1.06l-3.57-3.58A4.5 4.5 0 0 0 10.5 6Z" fill="currentColor" />
-                  </svg>
-                </span>
-                <h4>Research &amp; Strategy</h4>
-              </div>
+              <span class="skill-symbol">⌕</span>
+              <h3>Research &amp; Strategy</h3>
               <div class="rule"></div>
               <div class="chips">
-                <span>User Research</span><span>User Flows</span><span>Personas</span><span>Journey Mapping</span><span>Usability Testing</span><span>Competitive Analysis</span>
+                <span>User Research</span><span>User Flows</span><span>Journey Mapping</span>
               </div>
             </article>
             <article class="card skill-card reveal-on-scroll">
-              <div class="skill-card-head">
-                <span class="skill-icon" aria-hidden="true">
-                  <svg class="icon-svg" viewBox="0 0 24 24">
-                    <path d="M6 5.75A2.75 2.75 0 0 1 8.75 3h6.5A2.75 2.75 0 0 1 18 5.75v12.5A2.75 2.75 0 0 1 15.25 21h-6.5A2.75 2.75 0 0 1 6 18.25Zm2.75-1.25A1.25 1.25 0 0 0 7.5 5.75v12.5c0 .69.56 1.25 1.25 1.25h6.5c.69 0 1.25-.56 1.25-1.25V5.75c0-.69-.56-1.25-1.25-1.25Z" fill="currentColor" />
-                    <path d="M9 8.25h6a.75.75 0 0 1 0 1.5H9a.75.75 0 0 1 0-1.5Zm0 3.5h6a.75.75 0 0 1 0 1.5H9a.75.75 0 0 1 0-1.5Zm0 3.5h3.5a.75.75 0 0 1 0 1.5H9a.75.75 0 0 1 0-1.5Z" fill="currentColor" />
-                  </svg>
-                </span>
-                <h4>Product Design</h4>
-              </div>
+              <span class="skill-symbol">✧</span>
+              <h3>Interaction</h3>
               <div class="rule"></div>
               <div class="chips">
-                <span>Product Thinking</span><span>Design Strategy</span><span>Information Architecture</span><span>User-Centered Design</span><span>Feature Prioritization</span><span>End-to-End Product Design</span>
+                <span>Prototyping</span><span>Microinteractions</span><span>Accessibility</span>
               </div>
             </article>
             <article class="card skill-card reveal-on-scroll">
-              <div class="skill-card-head">
-                <span class="skill-icon" aria-hidden="true">
-                  <svg class="icon-svg" viewBox="0 0 24 24">
-                    <path d="M12.02 3.5a4.5 4.5 0 0 1 4.5 4.5c0 1.03-.35 1.98-.94 2.73A4.98 4.98 0 0 1 19.5 15.5v1.75a.75.75 0 0 1-1.5 0V15.5a3.5 3.5 0 0 0-3.5-3.5h-5A3.5 3.5 0 0 0 6 15.5v1.75a.75.75 0 0 1-1.5 0V15.5a4.98 4.98 0 0 1 3.92-4.77A4.48 4.48 0 0 1 7.52 8a4.5 4.5 0 0 1 4.5-4.5Zm0 1.5A3 3 0 1 0 12 11a3 3 0 0 0 .02-6Z" fill="currentColor" />
-                    <path d="M18.3 4.6a.75.75 0 0 1 1.06 0l.55.55.55-.55a.75.75 0 1 1 1.06 1.06l-.55.55.55.55a.75.75 0 1 1-1.06 1.06l-.55-.55-.55.55a.75.75 0 0 1-1.06-1.06l.55-.55-.55-.55a.75.75 0 0 1 0-1.06Z" fill="currentColor" />
-                  </svg>
-                </span>
-                <h4>AI Design</h4>
-              </div>
+              <span class="skill-symbol">◎</span>
+              <h3>Collaboration</h3>
               <div class="rule"></div>
               <div class="chips">
-                <span>AI-Assisted Design</span><span>Design Automation</span>
+                <span>Agile</span><span>Cross-functional Work</span><span>Developer Handoff</span>
               </div>
             </article>
             <article class="card skill-card reveal-on-scroll">
-              <div class="skill-card-head">
-                <span class="skill-icon" aria-hidden="true">
-                  <svg class="icon-svg" viewBox="0 0 24 24">
-                    <path d="M12 4.25a.75.75 0 0 1 .75.75v2.4a4.61 4.61 0 0 1 3.85 3.85H19a.75.75 0 0 1 0 1.5h-2.4a4.61 4.61 0 0 1-3.85 3.85V19a.75.75 0 0 1-1.5 0v-2.4a4.61 4.61 0 0 1-3.85-3.85H5a.75.75 0 0 1 0-1.5h2.4A4.61 4.61 0 0 1 11.25 7.4V5a.75.75 0 0 1 .75-.75Zm0 4.5a3.1 3.1 0 1 0 0 6.2 3.1 3.1 0 0 0 0-6.2Z" fill="currentColor" />
-                  </svg>
-                </span>
-                <h4>Interaction Design</h4>
-              </div>
+              <span class="skill-symbol">▦</span>
+              <h3>Tools</h3>
               <div class="rule"></div>
               <div class="chips">
-                <span>Prototyping</span><span>Accessibility</span>
-              </div>
-            </article>
-            <article class="card skill-card reveal-on-scroll">
-              <div class="skill-card-head">
-                <span class="skill-icon" aria-hidden="true">
-                  <svg class="icon-svg" viewBox="0 0 24 24">
-                    <path d="M7.75 3h8.5A2.75 2.75 0 0 1 19 5.75v8.5A2.75 2.75 0 0 1 16.25 17h-8.5A2.75 2.75 0 0 1 5 14.25v-8.5A2.75 2.75 0 0 1 7.75 3Zm0 1.5c-.69 0-1.25.56-1.25 1.25v8.5c0 .69.56 1.25 1.25 1.25h8.5c.69 0 1.25-.56 1.25-1.25v-8.5c0-.69-.56-1.25-1.25-1.25Z" fill="currentColor" />
-                    <path d="M8.5 8.5h3v3h-3Zm4 0h3v3h-3Zm-4 4h3v3h-3Zm4 4h3v1.5h-3Z" fill="currentColor" />
-                  </svg>
-                </span>
-                <h4>Tools</h4>
-              </div>
-              <div class="rule"></div>
-              <div class="chips">
-                <span>Figma</span><span>Photoshop</span><span>Illustrator</span><span>Canva</span><span>Adobe XD</span><span>LottieFiles</span>
+                <span>Figma</span><span>Photoshop</span><span>Illustrator</span><span>Canva</span>
               </div>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="section section-pad grid-backdrop" id="projects">
-        <div class="container projects-container">
-          <h3 class="section-title">Projects</h3>
+      <section class="section grid-backdrop" id="projects">
+        <div class="figma-projects">
+          <h2 class="section-title">Projects</h2>
           <p class="section-subtitle">Where ideas turn into interfaces.</p>
           <div class="project-list" id="project-list"></div>
         </div>
       </section>
 
-      <section class="section section-pad grid-backdrop" id="live-product">
-        <div class="container live-product">
-          <div class="live-copy">
-            <h3 class="section-title section-title-split">Live<br />Product</h3>
-            <p class="section-subtitle">Designing products that ship to real users.</p>
-          </div>
+      <section class="section live-section grid-backdrop" id="live-product">
+        <div class="figma-projects">
+          <h2 class="section-title section-title-split">Live<br />Product</h2>
+          <p class="section-subtitle">Designing products that ship to real users.</p>
           <div class="live-layout">
             <div class="live-image-block">
               <div class="image-card">
                 <img
-                  src="https://www.figma.com/api/mcp/asset/7747dd51-6e36-4c4c-bad6-c25ccd9a7c51"
+                  src="./assets/figma-relaxdoc.png"
                   alt="RelaxDoc app screens"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <div class="live-badge"><span></span>LIVE</div>
               </div>
               <p>Now live on Google Play Store</p>
             </div>
             <div class="live-details">
-              <div class="chips">
+              <div class="chips project-tags">
                 <span>Healthcare</span><span>Medical Commerce</span><span>Android App</span>
               </div>
-              <h4>RelaxDoc</h4>
+              <h3>RelaxDoc</h3>
               <div class="rule"></div>
               <p>
-                A healthcare mobile platform designed to simplify medicine
-                discovery and online consultations through a clear, accessible
-                user journey.
+                A healthcare mobile platform designed to simplify medicine discovery and
+                online consultations through a clear, accessible user journey.
               </p>
               <div class="detail-block">
                 <small>My Role</small>
@@ -370,77 +308,53 @@
         </div>
       </section>
 
-      <section class="section section-pad grid-backdrop" id="contact">
-        <div class="container">
+      <section class="section contact-section grid-backdrop" id="contact">
+        <div class="figma-section">
+          <h2 class="section-title">Contact</h2>
+          <p class="section-subtitle">
+            Have an idea, opportunity, or feedback? Let's build something thoughtful.
+          </p>
           <div class="contact-card">
             <div class="contact-copy">
               <p class="contact-index">06 — Contact</p>
-              <h4>Got an idea?<br />Let's design it.</h4>
+              <h3>Got an idea?<br />Let's design it.</h3>
               <p>
-                From user research and wireframing to polished interfaces and
-                design systems, I create thoughtful digital experiences that
-                are functional, accessible, and visually engaging.
+                Open to internships, freelance projects, collaborations, or just a UX
+                conversation — feel free to reach out.
               </p>
               <div class="contact-actions">
-                <a class="contact-pill contact-pill-email" href="mailto:gargibiswas1382003@gmail.com">
+                <a class="contact-pill" href="mailto:gargibiswas1382003@gmail.com">
                   <span class="icon-ring">
                     <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true">
-                      <path
-                        d="M4.75 6.25h14.5A1.75 1.75 0 0 1 21 8v8a1.75 1.75 0 0 1-1.75 1.75H4.75A1.75 1.75 0 0 1 3 16V8a1.75 1.75 0 0 1 1.75-1.75Zm0 1.5a.25.25 0 0 0-.25.25v.2l7.08 4.7a.75.75 0 0 0 .84 0l7.08-4.7V8a.25.25 0 0 0-.25-.25Zm14.75 2.25-6.25 4.16a2.25 2.25 0 0 1-2.5 0L4.5 10v6a.25.25 0 0 0 .25.25h14.5A.25.25 0 0 0 19.5 16Z"
-                        fill="currentColor"
-                      />
+                      <path d="M4.75 6.25h14.5A1.75 1.75 0 0 1 21 8v8a1.75 1.75 0 0 1-1.75 1.75H4.75A1.75 1.75 0 0 1 3 16V8a1.75 1.75 0 0 1 1.75-1.75Zm0 1.5a.25.25 0 0 0-.25.25v.2l7.08 4.7a.75.75 0 0 0 .84 0l7.08-4.7V8a.25.25 0 0 0-.25-.25Zm14.75 2.25-6.25 4.16a2.25 2.25 0 0 1-2.5 0L4.5 10v6a.25.25 0 0 0 .25.25h14.5A.25.25 0 0 0 19.5 16Z" fill="currentColor" />
                     </svg>
                   </span>
                   <span>gargibiswas1382003@gmail.com</span>
                 </a>
-                <a class="contact-pill contact-pill-phone" href="tel:+917005476376">
+                <a class="contact-pill" href="tel:+917005476376">
                   <span class="icon-ring">
                     <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true">
-                      <path
-                        d="M7.28 4.5h1.94c.38 0 .71.26.8.63l.82 3.29a.94.94 0 0 1-.25.9l-1.18 1.16a11.56 11.56 0 0 0 4.3 4.3l1.16-1.18a.94.94 0 0 1 .9-.25l3.29.82c.37.09.63.42.63.8v1.94A1.59 1.59 0 0 1 18.1 18.5h-.35C10.43 18.5 4.5 12.57 4.5 5.25V4.9A1.59 1.59 0 0 1 6.09 3.3Zm1.35 1.5H7.28a.09.09 0 0 0-.09.09v.35c0 6.49 5.26 11.75 11.75 11.75h.35a.09.09 0 0 0 .09-.09v-1.35l-2.66-.67-1.46 1.48a.75.75 0 0 1-.89.13A13.06 13.06 0 0 1 8.3 11.62a.75.75 0 0 1 .13-.89l1.48-1.46Z"
-                        fill="currentColor"
-                      />
+                      <path d="M7.28 4.5h1.94c.38 0 .71.26.8.63l.82 3.29a.94.94 0 0 1-.25.9l-1.18 1.16a11.56 11.56 0 0 0 4.3 4.3l1.16-1.18a.94.94 0 0 1 .9-.25l3.29.82c.37.09.63.42.63.8v1.94A1.59 1.59 0 0 1 18.1 18.5h-.35C10.43 18.5 4.5 12.57 4.5 5.25V4.9A1.59 1.59 0 0 1 6.09 3.3Zm1.35 1.5H7.28a.09.09 0 0 0-.09.09v.35c0 6.49 5.26 11.75 11.75 11.75h.35a.09.09 0 0 0 .09-.09v-1.35l-2.66-.67-1.46 1.48a.75.75 0 0 1-.89.13A13.06 13.06 0 0 1 8.3 11.62a.75.75 0 0 1 .13-.89l1.48-1.46Z" fill="currentColor" />
                     </svg>
                   </span>
                   <span>+91 70054 76376</span>
                 </a>
               </div>
             </div>
-            <div class="contact-visual">
+            <div class="contact-visual" aria-hidden="true">
+              <div class="connect-orbit orbit-outer"></div>
+              <div class="connect-orbit orbit-middle"></div>
+              <div class="connect-orbit orbit-inner"></div>
               <div class="corner corner-tr"></div>
               <div class="corner corner-bl"></div>
-              <div class="availability-card">
-                <div class="availability-icon">
-                  <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true">
-                    <path
-                      d="M9 4.75A1.75 1.75 0 0 1 10.75 3h2.5A1.75 1.75 0 0 1 15 4.75V6h2.75A2.25 2.25 0 0 1 20 8.25v9.5A2.25 2.25 0 0 1 17.75 20h-11.5A2.25 2.25 0 0 1 4 17.75v-9.5A2.25 2.25 0 0 1 6.25 6H9Zm1.5 0V6h3V4.75a.25.25 0 0 0-.25-.25h-2.5a.25.25 0 0 0-.25.25ZM5.5 10.5v7.25c0 .41.34.75.75.75h11.5a.75.75 0 0 0 .75-.75V10.5h-13Zm13-1.5V8.25a.75.75 0 0 0-.75-.75H6.25a.75.75 0 0 0-.75.75V9h13Z"
-                      fill="currentColor"
-                    />
+              <div class="connect-core">
+                <div class="connect-icon">
+                  <svg class="icon-svg" viewBox="0 0 24 24">
+                    <path d="M12 3.5a6.25 6.25 0 0 1 6.25 6.25c0 4.42-5.03 9.56-5.24 9.78a1.43 1.43 0 0 1-2.02 0c-.21-.22-5.24-5.36-5.24-9.78A6.25 6.25 0 0 1 12 3.5Zm0 1.5a4.75 4.75 0 0 0-4.75 4.75c0 3.36 3.66 7.57 4.75 8.74 1.09-1.17 4.75-5.38 4.75-8.74A4.75 4.75 0 0 0 12 5Zm0 2.25A2.5 2.5 0 1 1 9.5 9.75 2.5 2.5 0 0 1 12 7.25Zm0 1.5A1 1 0 1 0 13 9.75a1 1 0 0 0-1-1Z" fill="currentColor" />
                   </svg>
                 </div>
-                <p class="availability-eyebrow">Available For</p>
-                <h5>Full-Time Roles &amp; Freelance Projects</h5>
-                <div class="availability-divider"></div>
-                <ul class="availability-list">
-                  <li>UI/UX Design</li>
-                  <li>Product Design</li>
-                  <li>Design Systems</li>
-                  <li>UX Research</li>
-                </ul>
-                <div class="availability-panel">
-                  <div class="availability-panel-icon">
-                    <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true">
-                      <path
-                        d="M12 3.5a6.25 6.25 0 0 1 6.25 6.25c0 4.42-5.03 9.56-5.24 9.78a1.43 1.43 0 0 1-2.02 0c-.21-.22-5.24-5.36-5.24-9.78A6.25 6.25 0 0 1 12 3.5Zm0 1.5a4.75 4.75 0 0 0-4.75 4.75c0 3.36 3.66 7.57 4.75 8.74 1.09-1.17 4.75-5.38 4.75-8.74A4.75 4.75 0 0 0 12 5Zm0 2.25A2.5 2.5 0 1 1 9.5 9.75 2.5 2.5 0 0 1 12 7.25Zm0 1.5A1 1 0 1 0 13 9.75a1 1 0 0 0-1-1Z"
-                        fill="currentColor"
-                      />
-                    </svg>
-                  </div>
-                  <p>
-                    <span>Based in India • Open to</span>
-                    <strong>Remote, Hybrid &amp; On-site Opportunities</strong>
-                  </p>
-                </div>
+                <p>Let's Connect</p>
+                <div class="contact-dots"><i></i><i></i><i></i></div>
               </div>
             </div>
           </div>
@@ -450,28 +364,17 @@
     </main>
 
     <footer class="footer grid-backdrop">
-      <div class="container footer-inner">
+      <div class="figma-container footer-inner">
         <div class="footer-line"></div>
         <div class="footer-links">
-          <a
-            href="https://www.behance.net/gargibiswas3"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="https://www.behance.net/gargibiswas3" target="_blank" rel="noopener noreferrer">
             <img class="behance-logo" src="./assets/behance-logo.png" alt="" />
             <span>Behance</span>
           </a>
           <i></i>
-          <a
-            href="https://www.linkedin.com/in/gargi-biswas-6b5011249/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="https://www.linkedin.com/in/gargi-biswas-6b5011249/" target="_blank" rel="noopener noreferrer">
             <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true">
-              <path
-                d="M6.28 8.27a1.9 1.9 0 1 1 0-3.8 1.9 1.9 0 0 1 0 3.8ZM4.7 9.8h3.16V19.3H4.7Zm5.06 0h3.03v1.3h.04c.42-.8 1.46-1.65 3-1.65 3.2 0 3.79 2.11 3.79 4.85v5h-3.16v-4.43c0-1.06-.02-2.42-1.47-2.42-1.48 0-1.7 1.15-1.7 2.34v4.5H9.76Z"
-                fill="currentColor"
-              />
+              <path d="M6.28 8.27a1.9 1.9 0 1 1 0-3.8 1.9 1.9 0 0 1 0 3.8ZM4.7 9.8h3.16V19.3H4.7Zm5.06 0h3.03v1.3h.04c.42-.8 1.46-1.65 3-1.65 3.2 0 3.79 2.11 3.79 4.85v5h-3.16v-4.43c0-1.06-.02-2.42-1.47-2.42-1.48 0-1.7 1.15-1.7 2.34v4.5H9.76Z" fill="currentColor" />
             </svg>
             <span>LinkedIn</span>
           </a>

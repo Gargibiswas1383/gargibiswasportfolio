@@ -152,8 +152,8 @@ img {
   align-items: center;
   gap: 8px;
   padding: 8px 16px;
-  background: var(--accent-soft);
-  color: var(--accent);
+  background: #f0f0f0;
+  color: #151515;
   font-size: 14px;
   font-weight: 600;
   letter-spacing: -0.025em;
@@ -185,7 +185,11 @@ img {
 }
 
 .nav-links a.active,
-.nav-links a:hover {
+.nav-links a:hover,
+.home-pill.active,
+.home-pill:hover,
+.mobile-drawer-links a.active,
+.mobile-drawer-links a:hover {
   color: var(--accent);
   background: var(--accent-soft);
 }
@@ -225,6 +229,113 @@ img {
   width: 32px;
   height: 32px;
   background: transparent;
+}
+
+.mobile-menu-button,
+.drawer-close {
+  width: 40px;
+  height: 40px;
+  display: none;
+  place-items: center;
+  border: 0;
+  border-radius: 999px;
+  background: #f0f0f0;
+  color: #151515;
+  padding: 0;
+}
+
+.mobile-menu-button .icon-svg,
+.drawer-close .icon-svg {
+  width: 20px;
+  height: 20px;
+}
+
+.mobile-drawer-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 25;
+  display: none;
+  background: rgba(17, 17, 17, 0.28);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 180ms ease;
+}
+
+.mobile-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 30;
+  width: min(320px, calc(100vw - 32px));
+  height: 100dvh;
+  display: none;
+  flex-direction: column;
+  gap: 28px;
+  padding: 22px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: -24px 0 50px rgba(0, 0, 0, 0.18);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  transform: translateX(104%);
+  pointer-events: auto;
+  transition: transform 220ms ease;
+}
+
+.mobile-drawer-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  color: var(--text);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.mobile-drawer-links {
+  display: grid;
+  gap: 8px;
+}
+
+.mobile-drawer-links a {
+  display: flex;
+  align-items: center;
+  min-height: 46px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  color: #303030;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.mobile-drawer-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.drawer-resume {
+  flex: 1;
+  justify-content: center;
+}
+
+.drawer-theme {
+  display: grid;
+}
+
+body.drawer-open {
+  overflow: hidden;
+}
+
+body.drawer-open .mobile-drawer-backdrop {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+body.drawer-open .mobile-drawer {
+  transform: translateX(0);
 }
 
 .hero-shell {
@@ -1007,6 +1118,13 @@ img {
   color: #e5e7eb;
 }
 
+:root[data-theme="dark"] .home-pill,
+:root[data-theme="dark"] .mobile-menu-button,
+:root[data-theme="dark"] .drawer-close {
+  background: rgba(255, 255, 255, 0.08);
+  color: #f4f4f5;
+}
+
 :root[data-theme="dark"] .theme-pill,
 :root[data-theme="dark"] .icon-link {
   background: rgba(255, 255, 255, 0.08);
@@ -1015,6 +1133,29 @@ img {
 
 :root[data-theme="dark"] .icon-link {
   background: transparent;
+}
+
+:root[data-theme="dark"] .mobile-drawer {
+  background: rgba(27, 30, 36, 0.96);
+}
+
+:root[data-theme="dark"] .mobile-drawer-head,
+:root[data-theme="dark"] .mobile-drawer-links a {
+  color: #f4f4f5;
+}
+
+:root[data-theme="dark"] .mobile-drawer-actions {
+  border-top-color: rgba(255, 255, 255, 0.08);
+}
+
+:root[data-theme="dark"] .nav-links a.active,
+:root[data-theme="dark"] .nav-links a:hover,
+:root[data-theme="dark"] .home-pill.active,
+:root[data-theme="dark"] .home-pill:hover,
+:root[data-theme="dark"] .mobile-drawer-links a.active,
+:root[data-theme="dark"] .mobile-drawer-links a:hover {
+  color: var(--accent);
+  background: var(--accent-soft);
 }
 
 :root[data-theme="dark"] .org,
@@ -1162,10 +1303,21 @@ img {
     display: none;
   }
 
-  .nav-actions,
-  .theme-pill,
-  .icon-link {
+  .nav-shell > .nav-actions {
     display: none;
+  }
+
+  .mobile-menu-button,
+  .drawer-close {
+    display: grid;
+  }
+
+  .mobile-drawer-backdrop {
+    display: block;
+  }
+
+  .mobile-drawer {
+    display: flex;
   }
 
   .hero-stage {
@@ -1314,9 +1466,9 @@ img {
   }
 
   .nav-shell {
-    width: auto;
-    min-width: 52px;
-    justify-content: center;
+    width: calc(100vw - 24px);
+    min-width: 0;
+    justify-content: space-between;
   }
 
   .about-inner {

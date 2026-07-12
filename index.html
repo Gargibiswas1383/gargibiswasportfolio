@@ -23,19 +23,30 @@
   <body>
     <header class="site-header">
       <nav class="nav-shell" aria-label="Primary navigation">
-        <a class="home-pill" href="#top" aria-label="Home">
+        <a class="home-pill nav-link active" href="#top" aria-label="Home">
           <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true">
             <path d="M3 10.75 12 3l9 7.75v9.25a1 1 0 0 1-1 1h-5.5v-6h-5v6H4a1 1 0 0 1-1-1z" fill="currentColor" />
           </svg>
           <span>Home</span>
         </a>
+        <button
+          class="mobile-menu-button"
+          type="button"
+          aria-label="Open navigation menu"
+          aria-controls="mobile-drawer"
+          aria-expanded="false"
+        >
+          <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4.75 6.75h14.5a.75.75 0 0 1 0 1.5H4.75a.75.75 0 0 1 0-1.5Zm0 4.5h14.5a.75.75 0 0 1 0 1.5H4.75a.75.75 0 0 1 0-1.5Zm0 4.5h14.5a.75.75 0 0 1 0 1.5H4.75a.75.75 0 0 1 0-1.5Z" fill="currentColor" />
+          </svg>
+        </button>
         <div class="nav-links">
-          <a href="#about">About</a>
-          <a href="#experience">Experience</a>
-          <a href="#education">Education</a>
-          <a href="#skills">Skills</a>
-          <a href="#projects">Work</a>
-          <a href="#contact">Contact</a>
+          <a class="nav-link" href="#about">About</a>
+          <a class="nav-link" href="#experience">Experience</a>
+          <a class="nav-link" href="#education">Education</a>
+          <a class="nav-link" href="#skills">Skills</a>
+          <a class="nav-link" href="#projects">Work</a>
+          <a class="nav-link" href="#contact">Contact</a>
         </div>
         <div class="nav-actions">
           <a
@@ -73,6 +84,41 @@
           </a>
         </div>
       </nav>
+      <div class="mobile-drawer-backdrop" data-drawer-close></div>
+      <aside class="mobile-drawer" id="mobile-drawer" aria-label="Mobile navigation" aria-hidden="true">
+        <div class="mobile-drawer-head">
+          <span>Navigation</span>
+          <button class="drawer-close" type="button" aria-label="Close navigation menu" data-drawer-close>
+            <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="m6.53 5.47 5.47 5.47 5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 1.06-1.06Z" fill="currentColor" />
+            </svg>
+          </button>
+        </div>
+        <div class="mobile-drawer-links">
+          <a class="nav-link active" href="#top">Home</a>
+          <a class="nav-link" href="#about">About</a>
+          <a class="nav-link" href="#experience">Experience</a>
+          <a class="nav-link" href="#education">Education</a>
+          <a class="nav-link" href="#skills">Skills</a>
+          <a class="nav-link" href="#projects">Work</a>
+          <a class="nav-link" href="#contact">Contact</a>
+        </div>
+        <div class="mobile-drawer-actions">
+          <a
+            class="resume-pill drawer-resume"
+            href="https://drive.google.com/file/d/1AH92gDEkU8awpTGvhW9BP4Ap_7mNFzel/view?usp=drivesdk"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Resume
+          </a>
+          <button class="theme-pill drawer-theme" type="button" aria-label="Toggle dark theme">
+            <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M20.5 14.3A7.8 7.8 0 0 1 9.7 3.5 8.7 8.7 0 1 0 20.5 14.3Z" fill="currentColor" />
+            </svg>
+          </button>
+        </div>
+      </aside>
     </header>
 
     <main id="top">

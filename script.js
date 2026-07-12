@@ -71,12 +71,16 @@ const projects = [
 
 const projectList = document.getElementById("project-list");
 const siteHeader = document.querySelector(".site-header");
-const navLinks = Array.from(document.querySelectorAll(".nav-links a"));
-const themeButton = document.querySelector(".theme-pill");
+const navLinks = Array.from(document.querySelectorAll(".nav-link"));
+const themeButtons = Array.from(document.querySelectorAll(".theme-pill"));
+const menuButton = document.querySelector(".mobile-menu-button");
+const mobileDrawer = document.querySelector(".mobile-drawer");
+const drawerCloseTriggers = Array.from(document.querySelectorAll("[data-drawer-close]"));
 const statNumbers = Array.from(document.querySelectorAll(".stat-number[data-count]"));
 const revealTargets = Array.from(document.querySelectorAll(".reveal-on-scroll"));
-const sectionTargets = navLinks
-  .map((link) => document.querySelector(link.getAttribute("href")))
+const sectionHashes = [...new Set(navLinks.map((link) => link.getAttribute("href")))];
+const sectionTargets = sectionHashes
+  .map((href) => document.querySelector(href))
   .filter(Boolean);
 
 if (projectList) {
@@ -113,40 +117,75 @@ const updateHeaderState = () => {
 updateHeaderState();
 window.addEventListener("scroll", updateHeaderState, { passive: true });
 
-themeButton?.addEventListener("click", () => {
-  const root = document.documentElement;
-  const nextTheme = root.dataset.theme === "dark" ? "" : "dark";
-  if (nextTheme) {
-    root.dataset.theme = nextTheme;
-    localStorage.setItem("portfolio-theme", nextTheme);
-  } else {
-    delete root.dataset.theme;
-    localStorage.removeItem("portfolio-theme");
+const setActiveNav = (activeHref) => {
+  navLinks.forEach((link) => {
+    link.classList.toggle("active", link.getAttribute("href") === activeHref);
+  });
+};
+
+const updateActiveNav = () => {
+  const headerOffset = siteHeader?.getBoundingClientRect().height || 88;
+  const marker = window.scrollY + headerOffset + 56;
+  let activeHref = "#top";
+
+  sectionTargets.forEach((section) => {
+    if (section.id !== "top" && section.offsetTop <= marker) {
+      activeHref = `#${section.id}`;
+    }
+  });
+
+  const nearBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 6;
+  if (nearBottom && document.querySelector("#contact")) {
+    activeHref = "#contact";
+  }
+
+  setActiveNav(activeHref);
+};
+
+updateActiveNav();
+window.addEventListener("scroll", updateActiveNav, { passive: true });
+window.addEventListener("resize", updateActiveNav);
+
+const setDrawerOpen = (isOpen) => {
+  document.body.classList.toggle("drawer-open", isOpen);
+  menuButton?.setAttribute("aria-expanded", String(isOpen));
+  mobileDrawer?.setAttribute("aria-hidden", String(!isOpen));
+};
+
+menuButton?.addEventListener("click", () => {
+  setDrawerOpen(!document.body.classList.contains("drawer-open"));
+});
+
+drawerCloseTriggers.forEach((trigger) => {
+  trigger.addEventListener("click", () => setDrawerOpen(false));
+});
+
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    setActiveNav(link.getAttribute("href"));
+    setDrawerOpen(false);
+  });
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    setDrawerOpen(false);
   }
 });
 
-if ("IntersectionObserver" in window && sectionTargets.length) {
-  const navObserver = new IntersectionObserver(
-    (entries) => {
-      const visible = entries
-        .filter((entry) => entry.isIntersecting)
-        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-
-      if (!visible) return;
-
-      navLinks.forEach((link) => {
-        const isActive = link.getAttribute("href") === `#${visible.target.id}`;
-        link.classList.toggle("active", isActive);
-      });
-    },
-    {
-      rootMargin: "-20% 0px -55% 0px",
-      threshold: [0.2, 0.35, 0.5]
+themeButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const root = document.documentElement;
+    const nextTheme = root.dataset.theme === "dark" ? "" : "dark";
+    if (nextTheme) {
+      root.dataset.theme = nextTheme;
+      localStorage.setItem("portfolio-theme", nextTheme);
+    } else {
+      delete root.dataset.theme;
+      localStorage.removeItem("portfolio-theme");
     }
-  );
-
-  sectionTargets.forEach((section) => navObserver.observe(section));
-}
+  });
+});
 
 if ("IntersectionObserver" in window) {
   const revealObserver = new IntersectionObserver(

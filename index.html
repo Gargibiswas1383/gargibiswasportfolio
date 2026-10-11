@@ -41,11 +41,11 @@
           </svg>
         </button>
         <div class="nav-links">
-          <a class="nav-link" href="#about">About</a>
-          <a class="nav-link" href="#experience">Experience</a>
-          <a class="nav-link" href="#education">Education</a>
-          <a class="nav-link" href="#skills">Skills</a>
           <a class="nav-link" href="#projects">Work</a>
+          <a class="nav-link" href="#experience">Experience</a>
+          <a class="nav-link" href="#skills">Skills</a>
+          <a class="nav-link" href="#about">About</a>
+          <a class="nav-link" href="#education">Education</a>
           <a class="nav-link" href="#contact">Contact</a>
         </div>
         <div class="nav-actions">
@@ -96,11 +96,11 @@
         </div>
         <div class="mobile-drawer-links">
           <a class="nav-link active" href="#top">Home</a>
-          <a class="nav-link" href="#about">About</a>
-          <a class="nav-link" href="#experience">Experience</a>
-          <a class="nav-link" href="#education">Education</a>
-          <a class="nav-link" href="#skills">Skills</a>
           <a class="nav-link" href="#projects">Work</a>
+          <a class="nav-link" href="#experience">Experience</a>
+          <a class="nav-link" href="#skills">Skills</a>
+          <a class="nav-link" href="#about">About</a>
+          <a class="nav-link" href="#education">Education</a>
           <a class="nav-link" href="#contact">Contact</a>
         </div>
         <div class="mobile-drawer-actions">
@@ -145,7 +145,7 @@
           </div>
         </div>
 
-        <section class="about-panel grid-backdrop" id="about">
+        <section class="about-panel grid-backdrop section-motion" id="about">
           <div class="figma-section about-inner">
             <h1 class="section-title about-title">WHO<br />AM I?</h1>
             <div class="about-body">
@@ -188,7 +188,7 @@
         </section>
       </section>
 
-      <section class="section grid-backdrop" id="experience">
+      <section class="section grid-backdrop section-motion" id="experience">
         <div class="figma-section">
           <h2 class="section-title">Experience</h2>
           <p class="section-subtitle">
@@ -219,7 +219,7 @@
         </div>
       </section>
 
-      <section class="section grid-backdrop" id="education">
+      <section class="section grid-backdrop section-motion" id="education">
         <div class="figma-section">
           <h2 class="section-title">Education</h2>
           <p class="section-subtitle">
@@ -248,7 +248,7 @@
         </div>
       </section>
 
-      <section class="section skills-section grid-backdrop" id="skills">
+      <section class="section skills-section grid-backdrop section-motion" id="skills">
         <div class="figma-section">
           <h2 class="section-title">Skills</h2>
           <p class="section-subtitle">
@@ -326,16 +326,27 @@
         </div>
       </section>
 
-      <section class="section grid-backdrop" id="projects">
+      <section class="section grid-backdrop section-motion" id="work-gallery">
         <div class="figma-projects">
-          <h2 class="section-title">Projects</h2>
-          <p class="section-subtitle">Where ideas turn into interfaces.</p>
-          <div class="project-list" id="project-list"></div>
+          <h2 class="section-title">Selected<br />Work</h2>
+          <p class="section-subtitle">A focused selection of product, platform, and brand experiences.</p>
+          <div class="project-carousel" aria-roledescription="carousel" aria-label="Selected projects">
+            <div class="project-list" id="project-list" tabindex="0"></div>
+            <div class="carousel-controls">
+              <button class="carousel-button" id="project-prev" type="button" aria-label="Previous project">←</button>
+              <div class="carousel-dots" id="carousel-dots" aria-label="Choose a project"></div>
+              <button class="carousel-button" id="project-next" type="button" aria-label="Next project">→</button>
+            </div>
+          </div>
+          <button class="work-toggle" id="work-toggle" type="button" aria-expanded="false">
+            View all projects
+          </button>
         </div>
       </section>
 
-      <section class="section live-section grid-backdrop" id="live-product">
+      <section class="section live-section grid-backdrop section-motion" id="projects">
         <div class="figma-projects">
+          <p class="eyebrow">Featured work</p>
           <h2 class="section-title section-title-split">Live<br />Product</h2>
           <p class="section-subtitle">Designing products that ship to real users.</p>
           <div class="live-layout">
@@ -361,6 +372,11 @@
                 A healthcare mobile platform designed to simplify medical product discovery,
                 ordering, and checkout experience for users.
               </p>
+              <div class="live-focus" aria-label="RelaxDoc project focus areas">
+                <button class="live-focus-button is-active" type="button" data-live-focus="research">Research</button>
+                <button class="live-focus-button" type="button" data-live-focus="flow">User flow</button>
+                <button class="live-focus-button" type="button" data-live-focus="system">Design system</button>
+              </div>
               <div class="detail-block">
                 <small>My Role</small>
                 <strong>UI/UX Designer</strong>
@@ -391,7 +407,7 @@
         </div>
       </section>
 
-      <section class="section contact-section grid-backdrop" id="contact">
+      <section class="section contact-section grid-backdrop section-motion" id="contact">
         <div class="figma-section">
           <h2 class="section-title">Contact</h2>
           <p class="section-subtitle">
@@ -404,6 +420,11 @@
                 Open to internships, freelance projects, collaborations, or just a UX
                 conversation — feel free to reach out.
               </p>
+              <div class="contact-intent" aria-label="What would you like to discuss?">
+                <button type="button" class="intent-chip is-active" data-intent="a product design project">Product design</button>
+                <button type="button" class="intent-chip" data-intent="a freelance project">Freelance</button>
+                <button type="button" class="intent-chip" data-intent="a UI/UX role">Full-time role</button>
+              </div>
               <div class="contact-actions">
                 <a class="contact-pill" href="mailto:gargibiswas1382003@gmail.com">
                   <span class="icon-ring">

@@ -23,7 +23,7 @@
       alt="View live portfolio"
     />
   </a>
-  <a href="https://drive.google.com/file/d/1BGniXzaHZgLNgTpqKDkxEIT1uDKpLgTO/view?usp=sharing">
+  <a href="https://drive.google.com/file/d/1GP6TFHdzaBmJblX39SKELeVSfevpeYQR/view?usp=sharing">
     <img
       src="https://img.shields.io/badge/VIEW_RESUME-171717?style=for-the-badge&amp;logo=googledrive&amp;logoColor=white"
       alt="View resume"

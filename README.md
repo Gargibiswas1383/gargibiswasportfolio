@@ -189,6 +189,31 @@
   </tr>
 </table>
 
+## More design snapshots
+
+<table>
+  <tr>
+    <td width="33%" align="center" valign="top">
+      <a href="https://www.behance.net/gallery/237711449/Designing-Cravings-where-purpose-meets-flavor-">
+        <img src="./assets/figma-cravings.png" alt="Cravings food platform design" width="100%" />
+      </a>
+      <br /><strong>Cravings</strong><br />Branding · UI · Storytelling
+    </td>
+    <td width="33%" align="center" valign="top">
+      <a href="https://www.behance.net/gallery/237335551/SEASON-A-touch-of-green-a-world-of-peace">
+        <img src="./assets/figma-season.png" alt="SEASON nature-inspired product design" width="100%" />
+      </a>
+      <br /><strong>SEASON</strong><br />Brand · Sustainability · UX
+    </td>
+    <td width="33%" align="center" valign="top">
+      <a href="https://www.behance.net/gallery/244698927/Lavanya-A-Celebration-of-Timeless-Jewels">
+        <img src="./assets/figma-lavanya.png" alt="Lavanya jewellery brand experience" width="100%" />
+      </a>
+      <br /><strong>Lavanya</strong><br />Luxury brand · E-commerce · UI
+    </td>
+  </tr>
+</table>
+
 ## Design toolkit
 
 <p align="center">
